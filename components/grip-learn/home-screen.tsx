@@ -59,7 +59,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         </div>
         
         <div className="relative z-10">
-          <span className="inline-block px-4 py-1.5 bg-[#F97B7B] text-white text-xs font-medium rounded-full mb-3">
+          <span className="inline-block px-4 py-1.5 bg-[#2AB07C]/20 text-[#2AB07C] text-xs font-medium rounded-full mb-3">
             Featured Bond
           </span>
           <div className="flex items-baseline justify-center gap-2 mb-1">
@@ -173,8 +173,8 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           
           {/* QuickStart - Center - same size as others */}
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 bg-[#2AB07C] rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-base">₹</span>
+            <div className="w-10 h-10 bg-[#1B2B6B] rounded-full flex items-center justify-center">
+              <span className="text-[#2AB07C] font-bold text-base">₹</span>
             </div>
             <span className="text-gray-500 text-xs mt-1">QuickStart</span>
           </div>

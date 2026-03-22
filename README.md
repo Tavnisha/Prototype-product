@@ -2,7 +2,7 @@
 > ## A PM Intern Assignment for Grip Invest
 >
 > ### The Problem-Statement
-> Most first-time users who land on Grip see a 13.50% YTM bond and feel confused, not excited. They do not know what YTM means, what a bond is, or why it is better than their FD. So they leave without investing. This is not a trust problem. It is a comprehension problem.
+> Most first-time users who land on Grip see a 13.50% YTM bond and feel confused, not excited. They do not know what YTM means, what a bond is, or why it is better than their FD. So they leave without investing. It is a comprehension problem especially for the layman users
 >
 > ### The Solution
 > A contextual in-app education strip called Bond Basics, placed directly on the Grip home screen between the hero banner and Investment Options. The strip meets users at the exact moment of confusion and walks them through bonds in under 2 minutes, right inside the product.

@@ -1,7 +1,7 @@
 > # Grip Learn: Bond Basics
 > ## A PM Intern Assignment for Grip Invest
 >
-> ### The Problem
+> ### The Problem-Statement
 > Most first-time users who land on Grip see a 13.50% YTM bond and feel confused, not excited. They do not know what YTM means, what a bond is, or why it is better than their FD. So they leave without investing. This is not a trust problem. It is a comprehension problem.
 >
 > ### The Solution

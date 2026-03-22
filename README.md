@@ -1,35 +1,20 @@
-# v0-grip-learn-prototype-fixes
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
-
-## Built with v0
-
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
-
-[Continue working on v0 →](https://v0.app/chat/projects/prj_FmtVqJbgHnO7GyuRUuWwi2tKMz2y)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
-
-<a href="https://v0.app/chat/api/kiro/clone/Tavnisha/v0-grip-learn-prototype-fixes" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+> # Grip Learn: Bond Basics
+> ## A PM Intern Assignment for Grip Invest
+>
+> ### The Problem
+> Most first-time users who land on Grip see a 13.50% YTM bond and feel confused, not excited. They do not know what YTM means, what a bond is, or why it is better than their FD. So they leave without investing. This is not a trust problem. It is a comprehension problem.
+>
+> ### The Solution
+> A contextual in-app education strip called Bond Basics, placed directly on the Grip home screen between the hero banner and Investment Options. The strip meets users at the exact moment of confusion and walks them through bonds in under 2 minutes, right inside the product.
+>
+> ### The Flow
+> Screen 1: Home screen with the Bond Basics strip. Screen 2: Did You Know hook showing the FD vs Bond return gap. Screen 3: Lesson 1, what is a bond. Screen 4: Lesson 2, how do you earn from it. Screen 5: Interactive quiz to reinforce learning. Screen 6: Certificate of completion with a direct CTA to explore bonds.
+>
+> ### Why It Works
+> It uses loss aversion to hook the user on Screen 2 by showing them what they are leaving on the table. It uses progressive disclosure so the user never feels overwhelmed. It ends with a certificate and a direct CTA so the educational moment converts into an investment action.
+>
+> ### Built With
+> Claude by Anthropic for prototype design and interaction flow. v0 by Vercel for coded prototype development. Inspired by INDmoney's in-app learning mechanic, adapted for Grip's fixed-income audience.
+>
+> ### Live Prototype
+> https://prototype-product-two.vercel.app/

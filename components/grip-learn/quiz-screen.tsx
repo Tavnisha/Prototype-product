@@ -262,7 +262,7 @@ export function QuizScreen({
           disabled={!hasAnswered}
           className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${
             hasAnswered
-              ? "bg-[#5B7FD3] text-white"
+              ? "bg-[#5B7FD3] text-white hover:opacity-80 cursor-pointer"
               : "bg-gray-200 text-gray-400 cursor-not-allowed"
           }`}
         >

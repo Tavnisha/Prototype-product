@@ -94,12 +94,12 @@ export function CertificateScreen({ score, onNavigate }: CertificateScreenProps)
         <div className="space-y-3 pb-8">
           <button
             onClick={() => onNavigate("home")}
-            className="w-full bg-[#2AB07C] text-white py-4 rounded-xl font-semibold text-lg"
+            className="w-full bg-[#2AB07C] text-white py-4 rounded-xl font-semibold text-lg hover:opacity-80 transition-opacity duration-200 cursor-pointer"
           >
             Explore Bonds on Grip
           </button>
           <button
-            className="w-full border-2 border-[#5B7FD3] text-[#5B7FD3] py-4 rounded-xl font-semibold text-lg"
+            className="w-full border-2 border-[#5B7FD3] text-[#5B7FD3] py-4 rounded-xl font-semibold text-lg hover:opacity-80 transition-opacity duration-200 cursor-pointer"
           >
             Share
           </button>

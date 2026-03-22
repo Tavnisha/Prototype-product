@@ -85,7 +85,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           <p className="text-white font-semibold text-base">New to bonds?</p>
           <p className="text-white/80 text-sm">Explained in 2 minutes</p>
         </div>
-        <button className="bg-white text-[#2AB07C] px-6 py-2.5 rounded-lg font-semibold text-base">
+        <button className="bg-white text-[#2AB07C] px-6 py-2.5 rounded-lg font-semibold text-base hover:opacity-80 transition-opacity duration-200 cursor-pointer">
           Start
         </button>
       </div>
@@ -142,13 +142,17 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
 
       {/* Bottom Navigation */}
       <div className="px-4 pb-4 pt-2 bg-white">
-        <div className="flex items-end justify-around">
+        <div className="flex items-center justify-around">
           {/* Discover - Active */}
           <div className="flex flex-col items-center">
             <div className="w-10 h-10 bg-[#E3EEF2] rounded-full flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B2B6B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="#1B2B6B" stroke="#1B2B6B" />
+                <circle cx="12" cy="12" r="2" fill="#1B2B6B" />
+                <line x1="12" y1="2" x2="12" y2="6" />
+                <line x1="12" y1="18" x2="12" y2="22" />
+                <line x1="2" y1="12" x2="6" y2="12" />
+                <line x1="18" y1="12" x2="22" y2="12" />
               </svg>
             </div>
             <span className="text-[#1B2B6B] text-xs mt-1 font-medium">Discover</span>
@@ -167,10 +171,10 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             <span className="text-gray-400 text-xs mt-1">Invest</span>
           </div>
           
-          {/* QuickStart - Center */}
+          {/* QuickStart - Center - same size as others */}
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-[#2AB07C] rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">₹</span>
+            <div className="w-10 h-10 bg-[#2AB07C] rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-base">₹</span>
             </div>
             <span className="text-gray-500 text-xs mt-1">QuickStart</span>
           </div>
@@ -179,10 +183,10 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           <div className="flex flex-col items-center">
             <div className="w-10 h-10 flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="7" r="4" />
-                <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <circle cx="17" cy="11" r="3" />
-                <path d="M21 21v-1.5a2.5 2.5 0 0 0-2.5-2.5" />
+                <circle cx="9" cy="7" r="3" />
+                <circle cx="17" cy="7" r="3" />
+                <path d="M5 21v-2a4 4 0 0 1 4-4h4" />
+                <path d="M17 14a4 4 0 0 1 4 4v3" />
               </svg>
             </div>
             <span className="text-gray-400 text-xs mt-1">Referral</span>
@@ -192,8 +196,8 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           <div className="flex flex-col items-center">
             <div className="w-10 h-10 flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z" />
-                <path d="M2 9v1c0 1.1.9 2 2 2h1" />
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 3h-5a2 2 0 0 0-2 2v2h9V5a2 2 0 0 0-2-2z" />
               </svg>
             </div>
             <span className="text-gray-400 text-xs mt-1">Portfolio</span>

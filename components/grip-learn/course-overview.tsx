@@ -110,7 +110,7 @@ export function CourseOverview({ onNavigate }: CourseOverviewProps) {
       <div className="px-5 pb-8">
         <button 
           onClick={() => onNavigate("quiz")}
-          className="w-full bg-[#2AB07C] text-white py-4 rounded-xl font-semibold text-lg"
+          className="w-full bg-[#2AB07C] text-white py-4 rounded-xl font-semibold text-lg hover:opacity-80 transition-opacity duration-200 cursor-pointer"
         >
           Take lesson 1
         </button>

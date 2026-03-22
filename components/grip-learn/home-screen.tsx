@@ -63,7 +63,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             Featured Bond
           </span>
           <div className="flex items-baseline justify-center gap-2 mb-1">
-            <span className="text-[#2AB07C] text-5xl font-bold">13.50%</span>
+            <span className="text-[#2AB07C] text-4xl font-bold">13.50%</span>
             <span className="text-[#2AB07C] text-xl font-medium">YTM</span>
           </div>
           <p className="text-white text-sm mb-0.5">

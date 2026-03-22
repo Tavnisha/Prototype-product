@@ -23,31 +23,38 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
 
       {/* Featured Bond Card */}
       <div className="mx-5 rounded-2xl bg-[#1B2B6B] p-6 text-center relative overflow-hidden">
-        {/* Radial background pattern */}
-        <div className="absolute inset-0">
-          <svg className="w-full h-full" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
+        {/* Green sunburst ray pattern radiating from center */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg className="w-[200%] h-[200%]" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
             <defs>
-              <radialGradient id="radialBg" cx="50%" cy="50%" r="60%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.08)" />
-                <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+              <radialGradient id="rayGradient" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="rgba(42,176,124,0.15)" />
+                <stop offset="70%" stopColor="rgba(42,176,124,0.05)" />
+                <stop offset="100%" stopColor="rgba(42,176,124,0)" />
               </radialGradient>
             </defs>
-            <circle cx="160" cy="100" r="80" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5" fill="none" />
-            <circle cx="160" cy="100" r="60" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" fill="none" />
-            <circle cx="160" cy="100" r="100" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" fill="none" />
-            <circle cx="160" cy="100" r="120" stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" fill="none" />
-            {/* Radial lines */}
-            {[...Array(12)].map((_, i) => (
-              <line
-                key={i}
-                x1="160"
-                y1="100"
-                x2={160 + 120 * Math.cos((i * 30 * Math.PI) / 180)}
-                y2={100 + 120 * Math.sin((i * 30 * Math.PI) / 180)}
-                stroke="rgba(255,255,255,0.05)"
-                strokeWidth="0.5"
-              />
-            ))}
+            {/* Sunburst rays */}
+            {[...Array(24)].map((_, i) => {
+              const angle = (i * 15 * Math.PI) / 180;
+              const x2 = 200 + 200 * Math.cos(angle);
+              const y2 = 200 + 200 * Math.sin(angle);
+              return (
+                <line
+                  key={i}
+                  x1="200"
+                  y1="200"
+                  x2={x2}
+                  y2={y2}
+                  stroke="rgba(42,176,124,0.12)"
+                  strokeWidth="2"
+                />
+              );
+            })}
+            {/* Concentric circles for depth */}
+            <circle cx="200" cy="200" r="60" stroke="rgba(42,176,124,0.08)" strokeWidth="1" fill="none" />
+            <circle cx="200" cy="200" r="100" stroke="rgba(42,176,124,0.06)" strokeWidth="1" fill="none" />
+            <circle cx="200" cy="200" r="140" stroke="rgba(42,176,124,0.04)" strokeWidth="1" fill="none" />
+            <circle cx="200" cy="200" r="180" stroke="rgba(42,176,124,0.02)" strokeWidth="1" fill="none" />
           </svg>
         </div>
         
@@ -62,8 +69,8 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           <p className="text-white text-sm mb-0.5">
             Starts from <span className="font-semibold">₹10,000</span>
           </p>
-          <p className="text-white/70 text-sm mb-5">Monthly payout</p>
-          <button className="bg-[#2AB07C] text-white px-10 py-3.5 rounded-xl font-semibold text-base">
+          <p className="text-white text-sm mb-5">Monthly payout</p>
+          <button className="bg-[#2AB07C] hover:bg-[#2AB07C]/80 text-white px-10 py-3.5 rounded-xl font-semibold text-base transition-opacity duration-200 cursor-pointer">
             Explore Now
           </button>
         </div>

@@ -23,38 +23,41 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
 
       {/* Featured Bond Card */}
       <div className="mx-5 rounded-2xl bg-[#1B2B6B] p-6 text-center relative overflow-hidden">
-        {/* Green sunburst ray pattern radiating from center */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg className="w-[200%] h-[200%]" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        {/* Green sunburst ray pattern radiating from center - spread to all corners */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
             <defs>
-              <radialGradient id="rayGradient" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="rgba(42,176,124,0.15)" />
-                <stop offset="70%" stopColor="rgba(42,176,124,0.05)" />
+              <radialGradient id="rayGradient" cx="50%" cy="50%" r="70%">
+                <stop offset="0%" stopColor="rgba(42,176,124,0.2)" />
+                <stop offset="50%" stopColor="rgba(42,176,124,0.1)" />
                 <stop offset="100%" stopColor="rgba(42,176,124,0)" />
               </radialGradient>
             </defs>
-            {/* Sunburst rays */}
-            {[...Array(24)].map((_, i) => {
-              const angle = (i * 15 * Math.PI) / 180;
-              const x2 = 200 + 200 * Math.cos(angle);
-              const y2 = 200 + 200 * Math.sin(angle);
+            {/* Background glow */}
+            <ellipse cx="200" cy="125" rx="250" ry="150" fill="url(#rayGradient)" />
+            {/* Sunburst rays extending to corners */}
+            {[...Array(36)].map((_, i) => {
+              const angle = (i * 10 * Math.PI) / 180;
+              const x2 = 200 + 300 * Math.cos(angle);
+              const y2 = 125 + 200 * Math.sin(angle);
               return (
                 <line
                   key={i}
                   x1="200"
-                  y1="200"
+                  y1="125"
                   x2={x2}
                   y2={y2}
-                  stroke="rgba(42,176,124,0.12)"
-                  strokeWidth="2"
+                  stroke="rgba(42,176,124,0.15)"
+                  strokeWidth="1.5"
                 />
               );
             })}
-            {/* Concentric circles for depth */}
-            <circle cx="200" cy="200" r="60" stroke="rgba(42,176,124,0.08)" strokeWidth="1" fill="none" />
-            <circle cx="200" cy="200" r="100" stroke="rgba(42,176,124,0.06)" strokeWidth="1" fill="none" />
-            <circle cx="200" cy="200" r="140" stroke="rgba(42,176,124,0.04)" strokeWidth="1" fill="none" />
-            <circle cx="200" cy="200" r="180" stroke="rgba(42,176,124,0.02)" strokeWidth="1" fill="none" />
+            {/* Concentric circles for depth - larger to fill card */}
+            <ellipse cx="200" cy="125" rx="50" ry="35" stroke="rgba(42,176,124,0.1)" strokeWidth="1" fill="none" />
+            <ellipse cx="200" cy="125" rx="90" ry="60" stroke="rgba(42,176,124,0.08)" strokeWidth="1" fill="none" />
+            <ellipse cx="200" cy="125" rx="140" ry="90" stroke="rgba(42,176,124,0.06)" strokeWidth="1" fill="none" />
+            <ellipse cx="200" cy="125" rx="200" ry="120" stroke="rgba(42,176,124,0.04)" strokeWidth="1" fill="none" />
+            <ellipse cx="200" cy="125" rx="260" ry="150" stroke="rgba(42,176,124,0.02)" strokeWidth="1" fill="none" />
           </svg>
         </div>
         
